@@ -1,12 +1,10 @@
 package com.user.controller;
 
 import com.user.service.OrderInterface;
-import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-
-import javax.annotation.Resource;
 
 /**
  * Created by MengMeng on 2019/9/22.
@@ -18,8 +16,7 @@ public class UserToOrderClient {
     String applicationName;
 
 
-    @Qualifier("OrderServer")
-    @Resource
+    @Autowired
     OrderInterface orderInterface;
 
     @RequestMapping("/userInfo")

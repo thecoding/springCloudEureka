@@ -6,7 +6,7 @@ server:
 eureka:
   client:
     service-url:
-      defaultZone: http://localhost:7000/eureka/
+      defaultZone: http://name:admin123@localhost:7000/eureka/
   instance:
       instance-id: ${spring.application.name}:${server.port}
       prefer-ip-address: true
@@ -19,3 +19,7 @@ eureka:
 feign:
   hystrix:
     enabled: true #是否开启断路器
+
+OrderServer:
+    ribbon:
+      NFLoadBalancerRuleClassName: com.netflix.loadbalancer.RoundRobinRule

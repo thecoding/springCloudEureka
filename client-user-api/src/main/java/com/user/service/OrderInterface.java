@@ -1,7 +1,7 @@
 package com.user.service;
 
 import com.user.service.fallback.OrderInterfaceFallBack;
-import org.springframework.cloud.netflix.feign.FeignClient;
+import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 /**
@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
  *
  * 这里是调用
  */
-@FeignClient(name="OrderServer",fallback =OrderInterfaceFallBack.class)
+@FeignClient(name="OrderServer",fallback=OrderInterfaceFallBack.class)
 public interface OrderInterface {
 
 
