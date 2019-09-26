@@ -14,9 +14,12 @@ public class OrderInfoController {
     @Value("${spring.application.name}")
     String applicationName;
 
+    @Value("${server.port}")
+    String serverPort;
+
     @RequestMapping("/orderApplicationInfo")
     public String getOrderInfo(){
-        return "this is " + applicationName;
+        return "this is " + applicationName+" and port is " + serverPort;
     }
 
     @RequestMapping("/")
