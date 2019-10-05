@@ -18,7 +18,7 @@ eureka:
 
 feign:
   hystrix:
-    enabled: true #是否开启断路器
+    enabled: false #是否开启断路器
 
 OrderServer:
     ribbon:
