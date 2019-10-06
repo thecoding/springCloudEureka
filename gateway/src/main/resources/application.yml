@@ -35,6 +35,12 @@ spring:
         - Path=/user/**  #请求地址：http://localhost:5000/user/**
         filters:
         - StripPrefix=1
+      - id: order_route
+        uri: lb://OrderServer
+        predicates:
+        - Path=/order/**
+        filters:
+        - StripPrefix=1
 #上面这段配置的意思是，配置了一个 id 为 user_route 的路由规则，
 #当访问地址 http://localhost:5000/user/* 时会自动转发到地址：http://localhost:2101/*
 #配置完成启动项目即可在浏览器访问进行测试，这里是没有 加入eureka注册中心的

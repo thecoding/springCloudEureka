@@ -25,10 +25,9 @@
     #当访问地址 http://localhost:5000/user/* 时会自动转发到地址：http://localhost:2101/*
     #配置完成启动项目即可在浏览器访问进行测试，这里是没有 加入eureka注册中心的
     
-    ---------------------------------------------------------
     
 ##### 下面是加入注册中心
-   porm.xml中加入eureka-client依赖
+   pom.xml中加入eureka-client依赖
     
     <dependency>
         <groupId>org.springframework.cloud</groupId>
