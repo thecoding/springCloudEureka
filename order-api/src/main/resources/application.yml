@@ -14,3 +14,15 @@ eureka:
 
 #      这里是注册集群服务
 #      defaultZone: http://name:admin123@127.0.0.1:7001/eureka/,http://name:admin123@127.0.0.1:7002/eureka/  # 指定服务注册中心的地址
+
+
+#监控
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+
+feign:
+  hystrix:
+    enabled: true #是否开启断路器

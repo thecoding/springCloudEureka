@@ -57,7 +57,7 @@ public class WebLogAop {
         log.info("请求Url : {}" , request.getRequestURL().toString());
         log.info("请求方式 : {}" , request.getMethod());
         log.info("请求ip : {}" , request.getRemoteAddr());
-        log.info("请求方法 : " , joinPoint.getSignature().getDeclaringTypeName() + "." + joinPoint.getSignature().getName());
+        log.info("请求方法 : {}" , joinPoint.getSignature().getDeclaringTypeName() + "." + joinPoint.getSignature().getName());
         log.info("请求参数 : {}" , Arrays.toString(joinPoint.getArgs()));
         // 系统信息
         log.info("浏览器：{}" , userAgent.getBrowser().toString());
