@@ -11,7 +11,11 @@ import java.util.List;
  */
 public interface TbPermissionService {
 
-    List<TbPermission> selectByUserId(Long userId);
+    default List<TbPermission> selectByUserId(Long userId){
+        return null;
+    }
 
     TbPermission getById(Long id);
+
+    String selectStr();
 }

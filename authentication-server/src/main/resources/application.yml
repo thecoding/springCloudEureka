@@ -14,9 +14,9 @@ spring:
   datasource:
     type: com.zaxxer.hikari.HikariDataSource
     driver-class-name: com.mysql.cj.jdbc.Driver
-    jdbc-url: jdbc:mysql://192.168.1.101:3306/oath2?useUnicode=true&characterEncoding=utf-8&useSSL=false
+    jdbc-url: jdbc:mysql://localhost:3307/oath2?useUnicode=true&characterEncoding=utf-8&useSSL=false
     username: root
-    password: 123456
+    password: 123321
     hikari:
       minimum-idle: 5
       idle-timeout: 600000
@@ -29,4 +29,6 @@ spring:
 
 mybatis:
   type-aliases-package: springcloud.authentication.server.domain
-  mapper-locations: classpath:mapper/*.xml
+  mapper-locations: classpath:tk.mybatis.mapper/*.xml
+#  或者这样配置
+  mapper-locations: classpath:**mapper/*.xml

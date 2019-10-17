@@ -13,6 +13,7 @@
         <module>order-api</module>
         <module>user-api</module>
         <module>gateway</module>
+        <module>authentication-server</module>
     </modules>
 
 

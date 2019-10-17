@@ -32,4 +32,8 @@
     WHERE u.id = ${userId}
   </select>
 
+    <select id="selectStr" resultType="java.lang.String">
+        SELECT enname from tb_permission where id = 37;
+    </select>
+
 </mapper>

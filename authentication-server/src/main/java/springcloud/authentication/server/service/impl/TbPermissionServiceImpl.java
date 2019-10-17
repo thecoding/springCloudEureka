@@ -33,4 +33,9 @@ public class TbPermissionServiceImpl implements TbPermissionService {
         example.createCriteria().andEqualTo("id", id);
         return tbPermissionMapper.selectOneByExample(example);
     }
+
+    @Override
+    public String selectStr() {
+        return tbPermissionMapper.selectStr();
+    }
 }
