@@ -31,4 +31,4 @@ mybatis:
   type-aliases-package: springcloud.authentication.server.domain
   mapper-locations: classpath:tk.mybatis.mapper/*.xml
 #  或者这样配置
-  mapper-locations: classpath:**mapper/*.xml
+#  mapper-locations: classpath:**mapper/*.xml
