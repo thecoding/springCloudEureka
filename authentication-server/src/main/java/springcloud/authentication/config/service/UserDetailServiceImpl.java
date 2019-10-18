@@ -32,11 +32,6 @@ public class UserDetailServiceImpl implements UserDetailsService {
 
     @Override
     public UserDetails loadUserByUsername(String userName) throws UsernameNotFoundException {
-
-//       测试
-//        String s = tbPermissionService.selectStr();
-//        System.out.println(s);
-
         // 查询用户信息
         TbUser tbUser = tbUserService.getByUsername(userName);
         List<GrantedAuthority> grantedAuthorityList = Lists.newArrayList();
