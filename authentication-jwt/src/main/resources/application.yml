@@ -1,0 +1,6 @@
+
+jwt:
+  secret: 123456
+
+server:
+  port: 8881
