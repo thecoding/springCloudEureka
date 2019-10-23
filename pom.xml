@@ -14,6 +14,7 @@
         <module>user-api</module>
         <module>gateway</module>
         <module>authentication-server</module>
+        <module>authentication-jwt</module>
     </modules>
 
 
