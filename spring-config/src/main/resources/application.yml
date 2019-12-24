@@ -1,0 +1,11 @@
+server:
+  port: 7000
+spring:
+  application:
+    name: config-server
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://gitee.com/thecoding/springConfig
+#公开的，就不用配置用户名和密码
